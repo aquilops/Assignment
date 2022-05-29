@@ -3,6 +3,8 @@
 #include <unistd.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
+
+
 #define SIZE 1024
 
 void send_email(FILE* email, int fd, struct sockaddr_in addr)
@@ -10,20 +12,20 @@ void send_email(FILE* email, int fd, struct sockaddr_in addr)
 {
 
 int n;
-cahr buffer[SIZE];
+char buffer[SIZE];
 
 
 int main(void)
 {
-// to deine port and ip
+// to define port and ip
 
-char* ip = "192.168.56.101"
+char* ip = "192.168.56.101";
 const int port = 143;
 
 //define variable
 
 int fd;
-struct sockassr_in server_addr,client_addr;
+struct sockaddr_in server_addr,client_addr;
 int f;
 char *filename = "clientIMAP.c";
 FILE *email =fopen(filename, "r");
@@ -54,7 +56,7 @@ return -1;
 send_file_data(email,fd,server_addr);
 
 print ("[Successfull] .Complete email transfer");
-print ("close")
+print ("close");
 
 return 0;
 
